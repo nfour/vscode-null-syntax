@@ -8,7 +8,7 @@
       "runtimeExecutable": "${execPath}",
       "args": [
         "${workspaceRoot}/test",
-        "${workspaceRoot}/test/ts.tsx",
+        "${workspaceRoot}/test/rust.rs",
          "--extensionDevelopmentPath=${workspaceRoot}"
       ],
       "postDebugTask": "npm: build", // Because preLaunch isnt run on restart

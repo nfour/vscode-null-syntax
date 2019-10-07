@@ -33,7 +33,8 @@ const theme: ITheme = {
         entity.name.section.markdown,
         meta.property-name.css,
         entity.other.attribute-name,
-        variable.other.normal.shell
+        variable.other.normal.shell,
+        source.rust entity.name.type.mod
       `,
       settings: {
         foreground: elements.propWrite,
@@ -104,7 +105,8 @@ const theme: ITheme = {
         support.function,
         entity.name.function,
         meta.selector.css,
-        entity.name.tag
+        entity.name.tag,
+        source.rust support.other.macro
       `,
       settings: { foreground: elements.function },
     },
@@ -137,7 +139,11 @@ const theme: ITheme = {
         keyword.other.debugger,
         constant.language.import-export-all,
         css.keyword.other.unit,
-        keyword.language.gherkin
+        keyword.language.gherkin,
+        source.rust keyword.operator.assignment,
+        source.rust keyword.operator.path,
+        source.rust keyword.operator.arithmetic
+
       `,
       settings: { foreground: elements.keyword },
     },
@@ -147,7 +153,10 @@ const theme: ITheme = {
      */
     {
       scope: `
-        storage
+        storage,
+        keyword.other.binding.rust,
+        source.rust keyword.other,
+        source.rust entity.name.lifetime
       `,
       settings: { foreground: elements.storage },
     },
@@ -171,7 +180,10 @@ const theme: ITheme = {
         support.variable.object.node,
         support.variable.property.js,
         constant.language,
-        markup.heading.section
+        markup.heading.section,
+        source.rust variable.language.self,
+        source.rust storage.class.std,
+        source.rust storage.type.core
       `,
       settings: { foreground: elements.constant },
     },
@@ -197,7 +209,8 @@ const theme: ITheme = {
         meta.import variable.other.readwrite.alias,
         meta.class.js entity.name.type.class.js,
         meta.class.js meta.method.declaration.js meta.definition.method.js,
-        meta.class.js meta.field.declaration.js meta.definition.property.js
+        meta.class.js meta.field.declaration.js meta.definition.property.js,
+        source.rust variable.other
       `,
       settings: {
         fontStyle: 'bold',
@@ -287,7 +300,8 @@ const theme: ITheme = {
     {
       scope: `
         keyword.operator.type,
-        keyword.operator.optional
+        keyword.operator.optional,
+        source.rust keyword.operator
       `,
       settings: { foreground: elements.punctuation },
     },
@@ -314,7 +328,8 @@ const theme: ITheme = {
     {
       scope: `
         support.type.primitive,
-        support.type.builtin
+        support.type.builtin,
+        source.rust storage.type.primitive
       `,
       settings: { foreground: elements.annotation3, fontStyle: 'italic' },
     },
