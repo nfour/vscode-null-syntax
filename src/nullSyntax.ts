@@ -141,7 +141,6 @@ const theme: ITheme = {
         css.keyword.other.unit,
         keyword.language.gherkin,
         source.rust keyword.operator.assignment,
-        source.rust keyword.operator.path,
         source.rust keyword.operator.arithmetic
 
       `,
@@ -183,7 +182,8 @@ const theme: ITheme = {
         markup.heading.section,
         source.rust variable.language.self,
         source.rust storage.class.std,
-        source.rust storage.type.core
+        source.rust storage.type.core,
+        source.toml constant.other
       `,
       settings: { foreground: elements.constant },
     },
