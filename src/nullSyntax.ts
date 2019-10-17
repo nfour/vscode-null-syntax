@@ -155,7 +155,8 @@ const theme: ITheme = {
         storage,
         keyword.other.binding.rust,
         source.rust keyword.other,
-        source.rust entity.name.lifetime
+        source.rust entity.name.lifetime,
+        meta.attribute.rust
       `,
       settings: { foreground: elements.storage },
     },
@@ -284,7 +285,8 @@ const theme: ITheme = {
         meta.type.annotation,
         meta.type.annotation variable.object.property,
         meta.class meta.type.annotation meta.object.type meta.definition.property variable.object.property,
-        meta.return.type
+        meta.return.type,
+        entity.name.type.rust
       `,
       settings: { foreground: elements.annotation },
     },
