@@ -70,7 +70,7 @@ const d = { a: 1 }
  */
 
 switch (true) {
-  case: {
+  case true: {
     return 1;
   }
 }
