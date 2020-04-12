@@ -5,8 +5,9 @@ const theme: ITheme = {
   name: 'Null-Syntax',
   type: 'dark',
   colors: {
-    'foreground': elements.text,
+    'foreground': elements.editorText,
     'selection.background': elements.selection,
+    "peekViewEditor.background": elements.background,
 
     'editor.foreground': elements.text,
     'editor.background': elements.background,
@@ -14,6 +15,8 @@ const theme: ITheme = {
     'editor.selectionHighlightBorder': elements.selectionBorder,
     'editor.findMatchHighlightBackground': elements.findHighlight,
     'editor.lineHighlightBackground': elements.lineHighlight,
+    "editor.selectionHighlightBackground": elements.findHighlight,
+    "peekView.border": elements.findHighlight,
 
     'editorBracketMatch.border': elements.bracketContentsForeground,
     'editorCursor.foreground': elements.caret,

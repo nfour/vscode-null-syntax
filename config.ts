@@ -1,10 +1,8 @@
 import * as C from 'color';
 
 export const colors = {
-  foregrounds: ['#e0e0e0', '#dadada', '#cacaca', '#bababa'],
-
+  foregrounds: ['#e0e0e0', '#dadada', '#cacaca', '#bababa', '#ffffffcc'],
   back: '#201f1f',
-
   red: '#e79d8d',
   orange: '#fdbd7d',
   yellow: '#e2d294',
@@ -28,6 +26,7 @@ const dry: any = {};
 export const elements = {
   importantText: colors.foregrounds[0],
   text: colors.foregrounds[1],
+  editorText: colors.foregrounds[4],
   background: dry.background = colors.back,
 
   // Not sure where these get used
@@ -75,7 +74,7 @@ export const elements = {
   selection: colors.lime + '30',
   selectionBorder: colors.lime + '70',
   lineHighlight: C(dry.background).darken(0.2).hex(),
-  findHighlight: colors.yellow + '40',
+  findHighlight: colors.gold + '40',
   guide: colors.foregrounds[1] + '35',
   activeGuide: colors.foregrounds[1] + '50',
   invisibles: colors.foregrounds[1] + '05',

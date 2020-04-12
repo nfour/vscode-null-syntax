@@ -1,4 +1,4 @@
-// tslint:disable
+// @ts-nocheck
 
 /**
  *
@@ -10,7 +10,10 @@ import { A as b, c } from './asdasd';
 import A from './a'
 import { C, b } from 'b'
 
-export const foo = async function test() { }
+export const foo = async function test() {
+  a
+
+}
 export default {
   "a": 1,
   b: {

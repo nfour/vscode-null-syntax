@@ -7,7 +7,7 @@
 	"scripts": {
 		"build": "ts-node scripts/build",
 		"release": "yarn build && yarn vsce publish",
-		"dev": "nodemon -e ts -w src -x ts-node scripts/build"
+		"dev": "nodemon -e ts -w *.ts -x ts-node scripts/build"
 	},
 	"engines": {
 		"vscode": "^1.22.0"

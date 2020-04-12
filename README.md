@@ -1,9 +1,8 @@
 # VsCode Null Syntax Theme
 
-- [VsCode Null Syntax Theme](#vscode-null-syntax-theme)
-  - [Type Annotations](#type-annotations)
-  - [Destructuring](#destructuring)
-  - [Customizing](#customizing)
++ [Type Annotations](#type-annotations)
++ [Destructuring](#destructuring)
++ [Contributing](#contributing)
 
 A theme which focuses on:
 - Fading punctuation and annotations
@@ -15,11 +14,9 @@ A theme which focuses on:
 ## Destructuring 
 ![Null](./docs/destructuring.png)
 
-## Customizing
+## Contributing
 
-You can customize the `variables.ts` file to your own preference!
-
-Steps:
-- Hit `F5`, this will open up a debugger instance in the `test` folder
-- Modify `src/variables.ts` `colors`
-- Hit the reload button on the debugger to see your changes
+- Clone project
+- Hit `F5`. Debugs the current workspace in a new window, showing theme changes as you commit them.
+- Run `yarn dev` to watch and build.
+- Modify the theme, save, you should see changes appear in the debugged editor window.

@@ -7,11 +7,13 @@
       "request": "launch",
       "runtimeExecutable": "${execPath}",
       "args": [
-        "${workspaceRoot}/test",
+        "${workspaceRoot}/",
+        "${workspaceRoot}/reference/ts.tsx",
          "--extensionDevelopmentPath=${workspaceRoot}"
       ],
-      "postDebugTask": "npm: build", // Because preLaunch isnt run on restart
-      "preLaunchTask": "npm: build"
+      // "postDebugTask": "npm: build", // Because preLaunch isnt run on restart
+      // "preLaunchTask": "npm: dev",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
