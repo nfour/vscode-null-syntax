@@ -1,13 +1,13 @@
 {
 	"name": "null-syntax",
 	"displayName": "Null Syntax",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "A theme which fades punctuation & highlights control flow",
 	"publisher": "nfour",
 	"scripts": {
-		"build": "ts-node scripts/build",
+		"build": "ts-node scripts/build && vsce package",
 		"release": "yarn build && yarn vsce publish",
-		"dev": "nodemon -e ts -w *.ts -x ts-node scripts/build"
+		"dev": "nodemon -e ts -w *.ts -x yarn build"
 	},
 	"engines": {
 		"vscode": "^1.22.0"

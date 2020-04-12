@@ -1,5 +1,5 @@
 import { ITheme } from './types';
-import { elements } from './config';
+import { elements, colors } from './config';
 
 const theme: ITheme = {
   name: 'Null-Syntax',
@@ -7,7 +7,7 @@ const theme: ITheme = {
   colors: {
     'foreground': elements.editorText,
     'selection.background': elements.selection,
-    "peekViewEditor.background": elements.background,
+    'peekViewEditor.background': elements.background,
 
     'editor.foreground': elements.text,
     'editor.background': elements.background,
@@ -15,8 +15,8 @@ const theme: ITheme = {
     'editor.selectionHighlightBorder': elements.selectionBorder,
     'editor.findMatchHighlightBackground': elements.findHighlight,
     'editor.lineHighlightBackground': elements.lineHighlight,
-    "editor.selectionHighlightBackground": elements.findHighlight,
-    "peekView.border": elements.findHighlight,
+    'editor.selectionHighlightBackground': elements.findHighlight,
+    'peekView.border': elements.findHighlight,
 
     'editorBracketMatch.border': elements.bracketContentsForeground,
     'editorCursor.foreground': elements.caret,
@@ -323,7 +323,9 @@ const theme: ITheme = {
         meta.type.declaration.tsx entity.name.type.alias.tsx,
         meta.interface.tsx entity.name.type.interface.tsx
       `,
-      settings: { fontStyle: 'bold' },
+      settings: {
+        fontStyle: 'bold',
+      },
     },
 
     /**
@@ -377,6 +379,12 @@ const theme: ITheme = {
       settings: { foreground: elements.constant },
     },
   ],
+  semanticTokenColors: {
+    'parameter.declaration': { fontStyle: 'underline' },
+    'variable.declaration': { fontStyle: 'underline' },
+    'property.declaration': { fontStyle: 'italic' },
+    'interface': { fontStyle: 'italic' },
+  },
 };
 
 export default theme;

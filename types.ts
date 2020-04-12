@@ -527,7 +527,15 @@ export interface ITheme {
     settings: Partial<{
       foreground: string;
       background: string;
-      fontStyle: 'italic' | 'bold';
+      fontStyle: 'italic' | 'bold' | string;
     }>;
   }>;
+  semanticTokenColors: {
+
+    [k: string]: Partial<{
+      foreground: string;
+      background: string;
+      fontStyle: 'italic' | 'bold' | string;
+    }>
+  }
 }

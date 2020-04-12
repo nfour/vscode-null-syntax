@@ -5,5 +5,5 @@
     "moduleResolution": "node",
     "strict": true,
   },
-  "exclude": [ "node_modules", "reference" ]
+  "exclude": [ "node_modules" ]
 }

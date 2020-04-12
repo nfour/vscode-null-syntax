@@ -180,7 +180,7 @@ const fn = (
     one: {
       two: three = 1,
     },
-  } = { one: { two: {} } },
+  }: { one: any } = { one: { two: {} } },
 ) => {
   return three;
 };
