@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
 import { join } from 'path';
-import theme from '../src/nullSyntax';
+import theme from '../theme';
 
 const file = JSON.stringify(theme);
 const themeDir = join(__dirname, '../themes');

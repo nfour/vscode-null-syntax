@@ -5,6 +5,5 @@
     "moduleResolution": "node",
     "strict": true,
   },
-  "exclude": [ "node_modules", "reference" ],
-  "include": ["./*.ts"]
+  "exclude": [ "node_modules", "reference" ]
 }

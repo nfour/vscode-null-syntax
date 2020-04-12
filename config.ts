@@ -1,12 +1,7 @@
 import * as C from 'color';
 
 export const colors = {
-  foregrounds: [
-    '#e0e0e0',
-    '#dadada',
-    '#cacaca',
-    '#bababa',
-  ],
+  foregrounds: ['#e0e0e0', '#dadada', '#cacaca', '#bababa'],
 
   back: '#201f1f',
 
@@ -55,7 +50,11 @@ export const elements = {
   comment: C(colors.purple).darken(0.22).desaturate(0.6).hex(),
   annotation: C(colors.darkPurple).saturate(0.6).hex(),
   annotation2: C(colors.darkPurple).desaturate(0.35).lighten(0.15).hex(),
-  annotation3: C(colors.darkPurple).mix(C(colors.teal), 0.5).desaturate(0.34).darken(0.12).hex(),
+  annotation3: C(colors.darkPurple)
+    .mix(C(colors.teal), 0.5)
+    .desaturate(0.34)
+    .darken(0.12)
+    .hex(),
 
   function: colors.orange,
 

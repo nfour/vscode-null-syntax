@@ -1,5 +1,5 @@
 import { ITheme } from './types';
-import { elements } from './variables';
+import { elements } from './config';
 
 const theme: ITheme = {
   name: 'Null-Syntax',
