@@ -2,7 +2,6 @@ export interface ITheme {
   name: string;
   type: string;
   colors: Partial<{
-
     /** Integrated Terminal Colors */
     'terminal.background': string;
     'terminal.foreground': string;
@@ -521,7 +520,6 @@ export interface ITheme {
     /** Border color on headers and the splitter in inline merge-conflicts. */
     'editorOverviewRuler.commonContentForeground': string;
     /** Overview ruler marker color for find matches. The color must not be opaque to not hide underlying decorations. */
-
   }>;
   tokenColors: Array<{
     name?: string;
@@ -530,6 +528,6 @@ export interface ITheme {
       foreground: string;
       background: string;
       fontStyle: 'italic' | 'bold';
-    }>,
+    }>;
   }>;
 }

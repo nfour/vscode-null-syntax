@@ -18,7 +18,6 @@ const theme: ITheme = {
     'editorBracketMatch.border': elements.bracketContentsForeground,
     'editorCursor.foreground': elements.caret,
     'editorWhitespace.foreground': elements.invisibles,
-
   },
   tokenColors: [
     /**
