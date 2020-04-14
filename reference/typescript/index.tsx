@@ -48,3 +48,31 @@ export interface IFoo<A = any> {
 
 type La = string | { b?: La }
 const xx: { c?: string } | boolean = true;
+
+// JSX
+
+let observer!: (...args: any[]) => any
+type ReactFC = { (): any }
+let useStore: any;
+let Foo: any
+let viewList: any[]
+
+export const Blah: ReactFC = observer(() => {
+  const { asdasda: xyz } = useStore();
+
+  const activeViewIndex = viewList.findIndex(
+    (value) => xyz.view === value,
+  );
+
+  return (
+    <>
+      <Foo
+        variant="fullWidth"
+        value={xyz.view}
+        onChange={(e: any, value: any) => xyz.setView(value)}
+      >
+        {viewList.map((name, i) => <Foo key={name} />)}
+      </Foo>
+    </>
+  );
+});

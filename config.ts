@@ -24,8 +24,8 @@ export const colors = {
 const dry: any = {};
 
 export const elements = {
-  importantText: colors.foregrounds[0],
-  text: colors.foregrounds[1],
+  importantText: colors.foregrounds[1],
+  text: colors.foregrounds[2],
   editorText: colors.foregrounds[4],
   background: dry.background = colors.back,
 
@@ -58,7 +58,7 @@ export const elements = {
   function: colors.orange,
 
   variable: colors.yellow,
-  support: C(colors.yellow).mix(C(colors.foregrounds[1])).hex(),
+  support: C(colors.yellow).mix(C(colors.foregrounds[2])).hex(),
   supportType: colors.red,
   supportFunction: colors.lime,
   storage: colors.shade,
@@ -75,7 +75,7 @@ export const elements = {
   selectionBorder: colors.lime + '70',
   lineHighlight: C(dry.background).darken(0.2).hex(),
   findHighlight: colors.gold + '40',
-  guide: colors.foregrounds[1] + '35',
-  activeGuide: colors.foregrounds[1] + '50',
-  invisibles: colors.foregrounds[1] + '05',
+  guide: colors.foregrounds[2] + '35',
+  activeGuide: colors.foregrounds[2] + '50',
+  invisibles: colors.foregrounds[2] + '05',
 };

@@ -203,7 +203,7 @@ const theme: ITheme = {
     },
 
     /**
-     * (BOLD) Variable assignment
+     * (BOLD) Variable assignment and usage
      */
     {
       scope: `
@@ -216,8 +216,18 @@ const theme: ITheme = {
         source.rust variable.other
       `,
       settings: {
-        fontStyle: 'bold underline',
+        fontStyle: 'bold',
         foreground: elements.importantText,
+      },
+    },
+
+    // Imports
+    {
+      scope: `
+        meta.import variable.other.readwrite.alias
+      `,
+      settings: {
+        fontStyle: 'bold underline',
       },
     },
 
@@ -380,10 +390,12 @@ const theme: ITheme = {
     },
   ],
   semanticTokenColors: {
-    'parameter.declaration': { fontStyle: 'underline' },
-    'function.declaration': { fontStyle: 'underline' },
-    'variable.declaration': { fontStyle: 'underline' },
-    'property.declaration': { fontStyle: 'italic' },
+    'interface.declaration': { fontStyle: 'bold underline' },
+    'type.declaration': { fontStyle: 'bold underline' },
+    'parameter.declaration': { fontStyle: 'bold underline' },
+    'function.declaration': { fontStyle: 'bold underline' },
+    'variable.declaration': { fontStyle: 'bold underline' },
+
     'typeParameter': { fontStyle: 'italic' },
     'interface': { fontStyle: 'italic' },
   },
