@@ -216,7 +216,7 @@ const theme: ITheme = {
         source.rust variable.other
       `,
       settings: {
-        fontStyle: 'bold',
+        fontStyle: 'bold underline',
         foreground: elements.importantText,
       },
     },
@@ -381,8 +381,10 @@ const theme: ITheme = {
   ],
   semanticTokenColors: {
     'parameter.declaration': { fontStyle: 'underline' },
+    'function.declaration': { fontStyle: 'underline' },
     'variable.declaration': { fontStyle: 'underline' },
     'property.declaration': { fontStyle: 'italic' },
+    'typeParameter': { fontStyle: 'italic' },
     'interface': { fontStyle: 'italic' },
   },
 };

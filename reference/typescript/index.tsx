@@ -34,6 +34,7 @@ const fn3 = (x1: string, x2: number) => x1
 fn2({} as any)
 fn3;
 
+
 // Interfaces
 
 

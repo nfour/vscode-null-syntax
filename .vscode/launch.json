@@ -8,7 +8,7 @@
       "runtimeExecutable": "${execPath}",
       "args": [
         "${workspaceRoot}/",
-        "${workspaceRoot}/reference/ts.tsx",
+        "${workspaceRoot}/reference/typescript/index.tsx",
          "--extensionDevelopmentPath=${workspaceRoot}"
       ],
       // "postDebugTask": "npm: build", // Because preLaunch isnt run on restart
