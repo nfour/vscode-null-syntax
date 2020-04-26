@@ -397,7 +397,9 @@ const theme: ITheme = {
     'variable.declaration': { fontStyle: 'bold underline' },
 
     'typeParameter': { fontStyle: 'italic' },
-    'interface': { fontStyle: 'italic' },
+    'namespace': { fontStyle: 'italic' },
+    'type': { fontStyle: 'italic' },
+    'interface': { fontStyle: 'italic', foreground: elements.annotation },
   },
 };
 
