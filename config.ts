@@ -2,7 +2,7 @@ import * as C from 'color';
 
 export const colors = {
   foregrounds: ['#e0e0e0', '#dadada', '#cacaca', '#bababa', '#ffffffcc'],
-  back: '#201f1f',
+  back: C('#201f1f').darken(0.088).saturate(0.14).hex(),
   red: '#e79d8d',
   orange: '#fdbd7d',
   yellow: '#e2d294',

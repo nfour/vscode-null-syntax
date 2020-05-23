@@ -1,14 +1,27 @@
+import * as C from 'color';
 import { ITheme } from './types';
 import { elements, colors } from './config';
+
+const sidebarBg = C(colors.red).darken(0.814).desaturate(0.92);
+const sidebarFg = sidebarBg.desaturate(0.88).lighten(4.14);
+const activityBg = sidebarBg.lighten(0.14);
+const highlight = C(colors.red).darken(0.5).desaturate(0.14);
 
 const theme: ITheme = {
   name: 'Null-Syntax',
   type: 'dark',
   colors: {
+    // 'contrastActiveBorder': `${highlight.hex()}33`,
     'foreground': elements.editorText,
     'selection.background': elements.selection,
-    'peekViewEditor.background': elements.background,
 
+    'titleBar.activeBackground': activityBg.hex(),
+    'titleBar.inactiveBackground': activityBg.hex(),
+    'peekViewEditor.matchHighlightBackground': C(elements.background)
+      .darken(0.25)
+      .hex(),
+    'peekViewEditor.background': sidebarBg.desaturate(1).hex(),
+    'peekView.border': elements.findHighlight,
     'editor.foreground': elements.text,
     'editor.background': elements.background,
     'editor.selectionBackground': elements.selection,
@@ -16,11 +29,36 @@ const theme: ITheme = {
     'editor.findMatchHighlightBackground': elements.findHighlight,
     'editor.lineHighlightBackground': elements.lineHighlight,
     'editor.selectionHighlightBackground': elements.findHighlight,
-    'peekView.border': elements.findHighlight,
+
+    'editorGroupHeader.tabsBackground': sidebarBg.darken(0.088).hex(),
+    'tab.inactiveBackground': '#ffffff00',
+    'tab.activeBackground': highlight.hex() + '14',
 
     'editorBracketMatch.border': elements.bracketContentsForeground,
     'editorCursor.foreground': elements.caret,
     'editorWhitespace.foreground': elements.invisibles,
+
+    'activityBar.background': activityBg.hex(),
+    'activityBar.foreground': sidebarFg.darken(0.14).hex(),
+    'activityBarBadge.background': sidebarBg.saturate(0.7).darken(0.1).hex(),
+    'activityBarBadge.foreground': C(colors.red).saturate(0.88).hex(),
+
+    'sideBar.background': sidebarBg.hex(),
+    'sideBar.foreground': `${sidebarFg.lighten(0.25).hex()}aa`,
+    'sideBar.border': sidebarFg.darken(0.88).hex(),
+    'sideBarSectionHeader.background': sidebarBg.lighten(0.14).hex(),
+
+    'gitDecoration.ignoredResourceForeground': `${sidebarFg.hex()}70`,
+    'gitDecoration.modifiedResourceForeground': `${C(colors.orange)
+      .lighten(0.14)
+      .hex()}cc`,
+
+    'list.inactiveSelectionForeground': '#ffffffbb',
+    'list.inactiveSelectionBackground': `${highlight.hex()}14`,
+    'list.activeSelectionBackground': `${highlight.hex()}24`,
+    'list.focusBackground': `${highlight.hex()}33`,
+    'list.hoverBackground': `${highlight.hex()}33`,
+    'list.hoverForeground': '#ffffffbb',
   },
   tokenColors: [
     /**
