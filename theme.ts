@@ -30,9 +30,12 @@ const theme: ITheme = {
     'editor.lineHighlightBackground': elements.lineHighlight,
     'editor.selectionHighlightBackground': elements.findHighlight,
 
-    'editorGroupHeader.tabsBackground': sidebarBg.darken(0.088).hex(),
+    'editorGroupHeader.noTabsBackground': '#00000000',
+    'editorGroupHeader.tabsBackground': '#00000000',
+    'editorGroupHeader.tabsBorder': '#00000022',
+    'editorGroup.border': '#ffffff0a',
     'tab.inactiveBackground': '#ffffff00',
-    'tab.activeBackground': highlight.hex() + '14',
+    'tab.activeBackground': sidebarBg.hex(),
 
     'editorBracketMatch.border': elements.bracketContentsForeground,
     'editorCursor.foreground': elements.caret,

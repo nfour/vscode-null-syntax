@@ -77,5 +77,5 @@ export const elements = {
   findHighlight: colors.gold + '40',
   guide: colors.foregrounds[2] + '35',
   activeGuide: colors.foregrounds[2] + '50',
-  invisibles: colors.foregrounds[2] + '05',
+  invisibles: colors.foregrounds[2] + '14',
 };
