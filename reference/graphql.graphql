@@ -1,0 +1,23 @@
+scalar JSON
+scalar Upload
+
+type Query {
+  accessToken(id: String!, password: String!): AccessTokenResponse!
+  refreshAccessToken(accessToken: String!, refreshToken: String!): AccessTokenResponse!
+  uploadThing(id: Upload!): UploadResponses!
+}
+
+type Mutation {
+  resetPassword(userId: String!): Boolean
+}
+
+type FileMeta {
+  name: String!
+  type: String!
+}
+
+union UploadResponses = FileMeta | UploadErrorBody
+
+type UploadErrorBody {
+  errors: JSON
+}

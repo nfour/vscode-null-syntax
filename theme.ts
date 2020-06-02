@@ -62,6 +62,8 @@ const theme: ITheme = {
     'list.focusBackground': `${highlight.hex()}33`,
     'list.hoverBackground': `${highlight.hex()}33`,
     'list.hoverForeground': '#ffffffbb',
+
+    'terminal.background': sidebarBg.darken(0.2).hex(),
   },
   tokenColors: [
     /**
@@ -184,7 +186,8 @@ const theme: ITheme = {
         css.keyword.other.unit,
         keyword.language.gherkin,
         source.rust keyword.operator.assignment,
-        source.rust keyword.operator.arithmetic
+        source.rust keyword.operator.arithmetic,
+        punctuation.assignment.graphql
 
       `,
       settings: { foreground: elements.keyword },
@@ -199,7 +202,10 @@ const theme: ITheme = {
         keyword.other.binding.rust,
         source.rust keyword.other,
         source.rust entity.name.lifetime,
-        meta.attribute.rust
+        meta.attribute.rust,
+        keyword.scalar.graphql,
+        keyword.type.graphql,
+        keyword.union.graphql
       `,
       settings: { foreground: elements.storage },
     },
@@ -265,7 +271,8 @@ const theme: ITheme = {
     // Imports
     {
       scope: `
-        meta.import variable.other.readwrite.alias
+        meta.import variable.other.readwrite.alias,
+        variable.parameter.graphql
       `,
       settings: {
         fontStyle: 'bold underline',
@@ -339,7 +346,8 @@ const theme: ITheme = {
         meta.type.annotation variable.object.property,
         meta.class meta.type.annotation meta.object.type meta.definition.property variable.object.property,
         meta.return.type,
-        entity.name.type.rust
+        entity.name.type.rust,
+        support.type.graphql
       `,
       settings: { foreground: elements.annotation },
     },
@@ -348,7 +356,8 @@ const theme: ITheme = {
         meta.type.annotation variable.parameter,
         meta.type.declaration variable.object.property,
         meta.type.annotation meta.object.type variable.object.property,
-        meta.type.annotation string
+        meta.type.annotation string,
+        variable.graphql
       `,
       settings: { foreground: elements.annotation2 },
     },
@@ -425,7 +434,8 @@ const theme: ITheme = {
 
     {
       scope: `
-        string.language.gherkin.scenario.title
+        string.language.gherkin.scenario.title,
+        entity.scalar.graphql
       `,
       settings: { foreground: elements.constant },
     },
