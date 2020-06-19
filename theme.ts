@@ -3,10 +3,10 @@ import { ITheme } from './types';
 import { elements, colors } from './config';
 
 const sidebarBg = C(colors.red).darken(0.814).desaturate(0.92);
-const sidebarFg = sidebarBg.desaturate(0.88).lighten(4.14);
+const sidebarFg = sidebarBg.desaturate(0.88).lighten(4);
 const activityBg = sidebarBg.lighten(0.14);
 const highlight = C(colors.red).darken(0.5).desaturate(0.14);
-
+const peekBg = sidebarBg.desaturate(0.25).darken(0.075);
 const theme: ITheme = {
   name: 'Null-Syntax',
   type: 'dark',
@@ -17,23 +17,34 @@ const theme: ITheme = {
 
     'titleBar.activeBackground': activityBg.hex(),
     'titleBar.inactiveBackground': activityBg.hex(),
+
     'peekViewEditor.matchHighlightBackground': C(elements.background)
-      .darken(0.25)
+      .darken(0.088)
       .hex(),
-    'peekViewEditor.background': sidebarBg.desaturate(1).hex(),
-    'peekView.border': elements.findHighlight,
+    'peekViewEditor.background': peekBg.hex(),
+    'peekView.border': peekBg.lighten(0.3).hex(),
+    'peekViewResult.background': elements.background,
+    'peekViewEditorGutter.background': sidebarBg.darken(0.3).hex() + '60',
+    'peekViewResult.lineForeground': sidebarFg.darken(0.25).hex(),
+    'peekViewTitle.background': peekBg.hex(),
+    'peekViewTitleDescription.foreground': sidebarBg.lighten(2.88).hex(),
+    'peekViewTitleLabel.foreground': sidebarBg.lighten(5).hex(),
+
     'editor.foreground': elements.text,
     'editor.background': elements.background,
     'editor.selectionBackground': elements.selection,
     'editor.selectionHighlightBorder': elements.selectionBorder,
     'editor.findMatchHighlightBackground': elements.findHighlight,
-    'editor.lineHighlightBackground': elements.lineHighlight,
     'editor.selectionHighlightBackground': elements.findHighlight,
+
+    'editor.lineHighlightBackground': sidebarBg.darken(0.1).hex() + '88',
+    'editor.lineHighlightBorder': sidebarBg.lighten(0.1).hex() + '88',
 
     'editorGroupHeader.noTabsBackground': '#00000000',
     'editorGroupHeader.tabsBackground': '#00000000',
     'editorGroupHeader.tabsBorder': '#00000022',
     'editorGroup.border': '#ffffff0a',
+
     'tab.inactiveBackground': '#ffffff00',
     'tab.activeBackground': sidebarBg.hex(),
 
@@ -48,7 +59,7 @@ const theme: ITheme = {
 
     'sideBar.background': sidebarBg.hex(),
     'sideBar.foreground': `${sidebarFg.lighten(0.25).hex()}aa`,
-    'sideBar.border': sidebarFg.darken(0.88).hex(),
+    'sideBar.border': sidebarBg.lighten(0.3).hex(),
     'sideBarSectionHeader.background': sidebarBg.lighten(0.14).hex(),
 
     'gitDecoration.ignoredResourceForeground': `${sidebarFg.hex()}70`,
@@ -63,7 +74,24 @@ const theme: ITheme = {
     'list.hoverBackground': `${highlight.hex()}33`,
     'list.hoverForeground': '#ffffffbb',
 
-    'terminal.background': sidebarBg.darken(0.2).hex(),
+    'terminal.background': sidebarBg.hex(),
+    'terminal.border': sidebarBg.lighten(0.3).hex(),
+
+    'panel.border': sidebarBg.lighten(0.3).hex(),
+    'panel.background': sidebarBg.lighten(0.075).hex(),
+    'panelTitle.activeBorder': highlight.hex(),
+
+    'focusBorder': highlight.hex() + '88',
+
+    'editorLineNumber.foreground': sidebarBg.lighten(0.75).hex(),
+    'editorLineNumber.activeForeground': sidebarFg.hex(),
+
+    'editorSuggestWidget.background': activityBg.hex() + 'e0',
+    'editorSuggestWidget.border': activityBg.hex() + '00',
+    'editorSuggestWidget.foreground': sidebarFg.hex(),
+
+    'dropdown.background': activityBg.lighten(0.1).hex() + 'f0',
+    'dropdown.foreground': sidebarFg.hex(),
   },
   tokenColors: [
     /**
@@ -205,7 +233,9 @@ const theme: ITheme = {
         meta.attribute.rust,
         keyword.scalar.graphql,
         keyword.type.graphql,
-        keyword.union.graphql
+        keyword.union.graphql,
+        keyword.input.graphql,
+        keyword.enum.graphql
       `,
       settings: { foreground: elements.storage },
     },
@@ -435,7 +465,10 @@ const theme: ITheme = {
     {
       scope: `
         string.language.gherkin.scenario.title,
-        entity.scalar.graphql
+        entity.scalar.graphql,
+        support.type.enum.graphql,
+        constant.character.enum.graphql
+
       `,
       settings: { foreground: elements.constant },
     },

@@ -21,3 +21,7 @@ union UploadResponses = FileMeta | UploadErrorBody
 type UploadErrorBody {
   errors: JSON
 }
+
+input Foo {
+  bar: String!
+}
