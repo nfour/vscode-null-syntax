@@ -60,12 +60,8 @@ let viewList: any[]
 export const Blah: ReactFC = observer(() => {
   const { asdasda: xyz } = useStore();
 
-  const activeViewIndex = viewList.findIndex(
-    (value) => xyz.view === value,
-  );
-
   return (
-    <>
+    <$StyledDiv>
       <Foo
         variant="fullWidth"
         value={xyz.view}
@@ -73,6 +69,14 @@ export const Blah: ReactFC = observer(() => {
       >
         {viewList.map((name, i) => <Foo key={name} />)}
       </Foo>
-    </>
+    </$StyledDiv>
   );
 });
+
+// @ts-ignore
+const $StyledDiv = styled.div`
+  border-radius: 3px 3px;
+  color: red;
+  background: #fff;
+  display: flex;
+`

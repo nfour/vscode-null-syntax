@@ -2,11 +2,13 @@ import * as C from 'color';
 import { ITheme } from './types';
 import { elements, colors } from './config';
 
-const sidebarBg = C(colors.red).darken(0.814).desaturate(0.92);
+const darkener = 0.175;
+
+const sidebarBg = C(colors.red).darken(0.814).desaturate(0.92).darken(darkener);
 const sidebarFg = sidebarBg.desaturate(0.88).lighten(4);
-const activityBg = sidebarBg.lighten(0.14);
+const activityBg = sidebarBg.lighten(0.14).darken(darkener);
 const highlight = C(colors.red).darken(0.5).desaturate(0.14);
-const peekBg = sidebarBg.desaturate(0.25).darken(0.075);
+const peekBg = sidebarBg.desaturate(0.25).darken(0.075).darken(darkener);
 const theme: ITheme = {
   name: 'Null-Syntax',
   type: 'dark',
@@ -104,13 +106,27 @@ const theme: ITheme = {
         support.type.property-name.json,
         entity.name.tag.yaml,
         entity.name.section.markdown,
-        meta.property-name.css,
         entity.other.attribute-name,
         variable.other.normal.shell,
-        source.rust entity.name.type.mod
+        source.rust entity.name.type.mod,
+        meta.property-name.css, meta.property-name.scss
+
       `,
       settings: {
         foreground: elements.propWrite,
+        fontStyle: 'bold',
+      },
+    },
+    /**
+     * CSS
+     */
+    {
+      scope: `
+        meta.property-name.css, meta.property-name.scss
+
+      `,
+      settings: {
+        foreground: colors.grass,
         fontStyle: 'bold',
       },
     },
@@ -134,22 +150,9 @@ const theme: ITheme = {
     {
       scope: `
         string,
-        constant.numeric,
         markup.inline.raw.markdown
       `,
       settings: { foreground: elements.string },
-    },
-
-    /**
-     * Numbers
-     */
-    {
-      scope: `
-        constant.numeric
-      `,
-      settings: {
-        foreground: elements.constant,
-      },
     },
 
     // Fix templates
@@ -158,16 +161,6 @@ const theme: ITheme = {
         meta.template.expression
       `,
       settings: { foreground: elements.text },
-    },
-
-    /**
-     * Regex
-     */
-    {
-      scope: `
-        regex
-      `,
-      settings: { foreground: elements.regexp },
     },
 
     /**
@@ -218,7 +211,10 @@ const theme: ITheme = {
         punctuation.assignment.graphql
 
       `,
-      settings: { foreground: elements.keyword },
+      settings: {
+        foreground: elements.keyword,
+        fontStyle: 'italic',
+      },
     },
 
     /**
@@ -237,11 +233,12 @@ const theme: ITheme = {
         keyword.input.graphql,
         keyword.enum.graphql
       `,
-      settings: { foreground: elements.storage },
+      settings: { foreground: elements.storage, fontStyle: 'italic' },
     },
     {
       scope: `
-        meta.var storage.type.js
+        meta.var storage.type.js,
+        keyword.other.unit
       `,
       settings: { foreground: elements.storage2 },
     },
@@ -251,6 +248,10 @@ const theme: ITheme = {
      */
     {
       scope: `
+        support.constant,
+        constant.other,
+        constant.numeric,
+        regexp,
         variable.language.this,
         variable.language.super,
         support.class.builtin,
@@ -265,7 +266,10 @@ const theme: ITheme = {
         source.rust storage.type.core,
         source.toml constant.other
       `,
-      settings: { foreground: elements.constant },
+      settings: {
+        foreground: colors.blue,
+        fontStyle: 'italic',
+      },
     },
 
     /**
