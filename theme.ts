@@ -369,6 +369,7 @@ const theme: ITheme = {
       scope: `
         meta.indexer.declaration.ts variable.parameter.ts,
         meta.interface.ts,
+        meta.interface entity.name.type,
         cast.expr.ts entity.name.type.ts,
         meta.type.parameters.ts entity.name.type.ts,
         meta.indexer.declaration.tsx variable.parameter.tsx,
@@ -379,6 +380,7 @@ const theme: ITheme = {
         meta.type.annotation,
         meta.type.annotation variable.object.property,
         meta.class meta.type.annotation meta.object.type meta.definition.property variable.object.property,
+        meta.class meta.object.type meta.field.declaration meta.definition.property variable.object.property,
         meta.return.type,
         entity.name.type.rust,
         support.type.graphql
